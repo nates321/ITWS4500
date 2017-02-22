@@ -5,10 +5,12 @@
     <title>Lab 2</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
-    <div id="container-fluid">
+<body ng-app="weatherApp">
+    <div ng-controller="weatherController" id="container-fluid">
         <ul id="currentWeather" class="col-sm-4 col-md-4 list-group">
+		
             <li class= "list-group-item">
 				<div id="title" class ="title">Current Weather</div>
 				<div id="city" class="city"></div>
@@ -34,3 +36,4 @@
 <script src="jquery-2.2.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="script.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>

@@ -1,0 +1,222 @@
+@media all and (orientation:portrait){
+
+	#currentWeather  {
+	    
+	    
+	    width: 100%;
+	}
+
+	#forecast  {
+	    
+	    margin: 5px 5px 5px 5px;
+	    width: 100%;
+    
+	}
+	.forecastItem {
+
+		width: 100%;
+
+	}
+
+	#videosTab{
+
+		background-color: red;
+
+	}
+
+	#videosTab.list-group-item:hover {
+		background-color: red;
+	}
+
+	.list-group{
+
+		margin-top: 10px;
+	}
+
+	.panel#panel button{
+		width:100%;
+		position: static;
+		background-color: transparent;
+		color: white;
+		border: none;
+		height: 30px;
+	}
+	.panel#panel button:hover{
+		width:100%;
+		
+		background-color: white;
+		color: black;
+		border: none;
+	}
+	.panel#panel button:active{
+
+		border: none;
+
+	}
+	#panel{
+		position:fixed;
+		width: 100%;
+		z-index: 100;
+		clear: all;
+	}
+
+	#container{
+	position: relative;
+	top: 68px;	
+	padding-top: 15px;
+	}
+
+	.picture{
+		float: right;
+		clear: right;
+		text-align: right;
+		display: block;
+	}
+
+	.title{
+		display: block;
+
+	}
+	a:link {
+
+		text-decoration: none;
+		color: black;
+
+	}
+
+	a:hover{
+
+		text-decoration: none;
+		color: white;
+
+	}
+
+	.videos.list-group-item:hover {
+		background-color: red;
+		color: white;
+	}
+
+}
+.body{
+
+	padding: 0px;
+}
+.picture{
+
+width:50%;
+float: left;
+
+}
+#videos.list-group{
+
+	width:100%;
+	margin: 0px;
+}
+.title {
+
+	float: right;
+	width: 50%;
+	text-align: left;
+
+}
+.videos {
+
+	float: left;
+	display: block;
+	width:100%;
+
+}
+
+#currentWeather  {
+    text-align: center;
+    display: none;
+    margin: 5px 5px 5px 5px;
+    
+}
+
+#forecast  {
+    text-align: center;
+	display: none;
+    margin: 10px 10px 10px 10px;
+    
+}
+
+
+.list-group-item:hover{
+	
+	background-color: #f5f8fa;
+	
+	
+}
+
+#weatherTab {
+	background-color: #f5f8fa;
+	
+}
+
+
+
+.list-group {
+	
+	border-radius: 25px;
+	
+	
+}
+
+
+li.videos {
+	list-style-type: none;
+}
+
+ul#videos {
+	display: block;
+	text-align: center;
+}
+
+.panel#panel {
+	margin-bottom: 0px;
+	text-align: center;
+	padding: 0px;
+	background-color: black;
+}
+
+@media all and (orientation:landscape){
+	.panel#panel button{
+
+		width: 30%;
+		background-color: transparent;
+		color: white;
+		border-left: 2px white solid;
+		border-right: 2px white solid;
+		margin: 0px;
+
+	}
+}
+
+.wtitle {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.city {
+    font-size: 18px;
+}
+
+.icon {
+    margin: 10px;
+}
+
+.description {
+     font-size: 12px;
+ }
+
+.city, .description, .humidity ,.temperature{
+    margin-top: 5px;
+	
+}
+
+
+
+
+

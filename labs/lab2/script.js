@@ -9,6 +9,7 @@ function getWeather() {
 		var mapInsert ="<iframe width='400' height='500' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/view?key=AIzaSyDPDV0h0P5wBNVT3cBFTkyO5v_jtjzUPCE&center=" + latitude+ "," + longitude + "&zoom=18&maptype=satellite' allowfullscreen></iframe>"
 
 		$("#mapPlace").append(mapInsert);
+		//$("#currentWeather").show();
 		
         $.ajax({
             url: "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=imperial&appid=" + APIkey,
@@ -30,7 +31,7 @@ function getWeather() {
 				$("#currentWeather").fadeIn(600);
             },
             error: function() {
-                
+                alert("error");
             }
         });
     });
