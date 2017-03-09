@@ -1,0 +1,49 @@
+body {
+	background-color: #f5f8fa;
+	
+}
+
+.tweets:hover {
+	
+	background-color: #f5f8fa;
+	
+}
+.row h3 {
+	height: 50px;
+}
+
+.screen {
+	color: #8899a6;
+}
+
+.row
+
+.list-group {
+	
+	border-radius: 25px;
+	
+	
+}
+
+h3 {
+	text-align: center;
+	
+}
+
+a {
+	color: #DD0000;
+	text-decoration: none;
+}
+
+a:hover{
+	
+	color: #DD0000;
+	text-decoration: underline;
+	
+	
+}
+
+a:active {
+	color:#DD0000;
+	
+}

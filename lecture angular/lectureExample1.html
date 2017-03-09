@@ -6,21 +6,25 @@
   
 
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-  <script src="lectureExample1.js"></script>
+ 
   
 </head>
-<body ng-app="expressionExample">
-  <div ng-controller="ExampleController" class="expressions">
-  Expression:
-  <input type='text' ng-model="expr" size="80"/>
-  <button ng-click="addExp(expr)">Evaluate</button>
-  <ul>
-   <li ng-repeat="expr in exprs track by $index">
-     [ <a href="" ng-click="removeExp($index)">X</a> ]
-     <code>{{expr}}</code> => <span ng-bind="$parent.$eval(expr)"></span>
-    </li>
-  </ul>
-</div>
+<body>
+<div ng-app="appName" ng-controller="example">
+  <button id="example" ng-clicl= "view = 1">example</button>
+  <div class ="multi" ng-repeat = "v in multi" ng-show= "view==1">
+  multi {{v}}
+  </div>
+  </div>
+
+
+  <script>
+var app = angular.module('appName', []);
+app.controller('example', function($scope) {
+  $scope.multi = [0, 1, 2, 3];
+});
+
+  </script>
 </body>
 </html>
 

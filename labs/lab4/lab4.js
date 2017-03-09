@@ -10,9 +10,38 @@
         $scope.$watch("view",function(nv,ov){
             if (nv==1){
                
-                //this api is useful for getting around the https requirements for chrome when getting the location. its not as accurate though
-                 $.getJSON('http://ip-api.com/json', getWeather);
-                 $.getJSON('http://ip-api.com/json', getForecast);
+                
+                navigator.geolocation.getCurrentPosition(function (position) {
+                     var latitude = position.coords.latitude;
+                     var longitude = position.coords.longitude;
+        
+        
+                     var mapInsert ="<iframe width='400' height='500' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/view?key=AIzaSyDPDV0h0P5wBNVT3cBFTkyO5v_jtjzUPCE&center=" + latitude+ "," + longitude + "&zoom=18&maptype=satellite' allowfullscreen></iframe>"
+
+                    $("#mapPlace").append(mapInsert);
+
+
+                    $.getJSON('http://api.openweathermap.org/data/2.5/weather?', {
+                        lat: latitude,
+                        lon: longitude,
+                        appid: "7173682ad51a968f8f77bffc3e45fb87",
+                        units: "imperial"
+                    }, showWeather, 'jsonp');
+
+
+
+                    $.getJSON('http://api.openweathermap.org/data/2.5/forecast?', {
+                        lat: latitude,
+                        lon: longitude,
+                        appid: "7173682ad51a968f8f77bffc3e45fb87",
+                        units: "imperial"
+                    }, showForecast, 'jsonp');
+
+
+
+                });
+
+                 
                 
             }
             if (nv==2){
@@ -25,6 +54,12 @@
                     maxResults: "20",
                     key: "AIzaSyDPDV0h0P5wBNVT3cBFTkyO5v_jtjzUPCE"
                 }, showVideos, 'jsonp');
+
+
+
+
+
+                
             }
             
         })
@@ -47,16 +82,6 @@ var showVideos = function(data) {
 
 }
 
-
-
-var getForecast = function(data) {
-    $.getJSON('http://api.openweathermap.org/data/2.5/forecast?', {
-        lat: data.lat,
-        lon: data.lon,
-        appid: "7173682ad51a968f8f77bffc3e45fb87",
-        units: "imperial"
-    }, showForecast, 'jsonp');
-};
 
 
 
@@ -86,19 +111,6 @@ var showForecast = function(data) {
 
 
 
-
-var getWeather = function(data) {
-    var mapInsert ="<iframe width='400' height='500' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/view?key=AIzaSyDPDV0h0P5wBNVT3cBFTkyO5v_jtjzUPCE&center=" + data.lat+ "," + data.lon + "&zoom=18&maptype=satellite' allowfullscreen></iframe>"
-
-        $("#mapPlace").html(mapInsert);
-
-    $.getJSON('http://api.openweathermap.org/data/2.5/weather?', {
-        lat: data.lat,
-        lon: data.lon,
-        appid: "7173682ad51a968f8f77bffc3e45fb87",
-        units: "imperial"
-    }, showWeather, 'jsonp');
-};
 
 var showWeather = function(data) {
                  var city = data.name;

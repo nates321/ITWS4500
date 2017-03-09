@@ -130,14 +130,14 @@ float: left;
 #currentWeather  {
     text-align: center;
     display: none;
-    margin: 5px 5px 5px 5px;
+    margin: 0px;
     
 }
 
 #forecast  {
     text-align: center;
 	display: none;
-    margin: 10px 10px 10px 10px;
+    margin: 0px;
     
 }
 
@@ -159,7 +159,7 @@ float: left;
 .list-group {
 	
 	border-radius: 25px;
-	
+	margin: 0px;
 	
 }
 
