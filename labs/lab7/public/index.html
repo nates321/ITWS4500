@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>lab7</title>
+
+	    <link rel="stylesheet" type="text/css" href="lab5.css">
+	</head>
+
+	<body>
+		<header text-align = "center"><h3>Lab  6: Either show tweets or use the ETL function</h3></header>
+		
+    	<form method = "post">
+    		<div id = "theform">
+    		<!-- simple form to choose what to search for-->
+    			<div id = "inputs">
+    				<h4>For Querying, Building Database, or exporting to file</h4>
+    				<label for="subjct">Subject</label>
+    				<input type="text" name = "subject" id = "subject" placeholder="defaults to RPI area">
+    				<br />
+    				<label for="num">Number of Tweets</label>
+    				<input type="text" name = "num" id = "num" placeholder="default is 25" >
+    				<br />
+    				<h4>For Exporting to File</h4>
+    				<label for="fileName">File Name</label>
+    				<input type="text" name = "fileName" id = "fileName" placeholder="dont include extension">
+    				<br />
+    				<select name = "etype">
+	    				<option value = "json">Json</option>
+	    				<option value = "csv">csv</option>
+	    				<option value = "xml">xml</option>
+    				</select>
+
+    			</div>
+    			<div id = "submits">
+	    		<button type= "submit" formaction="/tweetsAPI">Query Twitter</button>
+	    		<br />
+	    		<button type="submit" formaction="/tweetsDB">Query Database</button>
+	    		<br />
+	    		<button type ="submit" formaction = "/buildDB">Build DB </button>
+	    		<br />
+    			<button type = "submit" formaction="/export">export from database to file</button>
+    			</div>
+    		</div>
+    	</form>
+    	
+    	
+	</body>
+</html>

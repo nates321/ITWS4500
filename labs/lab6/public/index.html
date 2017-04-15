@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>lab6</title>
+
+	    <link rel="stylesheet" type="text/css" href="lab5.css">
+	</head>
+
+	<body>
+		<header text-align = "center"><h3>Lab  6: Either show tweets or use the ETL function</h3></header>
+		
+    	<form method = "post">
+    		<div id = "theform">
+    		<!-- simple form to choose what to search for-->
+    			<div id = "inputs">
+    				<label for="subjct">Subject</label>
+    				<input type="text" name = "subject" id = "subject" placeholder="defaults to RPI area">
+    				<br />
+    				<label for="num">number of tweets</label>
+    				<input type="text" name = "num" id = "num" placeholder="default is 25" >
+    				<br />
+    				<select name = "etype">
+	    				<option value = "json">Json</option>
+	    				<option value = "csv">csv</option>
+    				</select>
+
+    			</div>
+    			<div id = "submits">
+	    		<button type= "submit" formaction="/tweets">Run</button>
+
+	    		<br />
+    			<button type = "submit" formaction="/export">export</button>
+    			</div>
+    		</div>
+    	</form>
+    	
+    	
+	</body>
+</html>

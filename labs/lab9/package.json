@@ -1,0 +1,25 @@
+{
+  "name": "Lab9server",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "main": "app.js",
+   "scripts": {
+	"start": "npm run installDB && npm run startServer",
+	"installDB": "node install/install.js",
+    "startServer": "node app.js"
+  },
+  "dependencies": {
+	"body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "request": "^2.69.0",
+	"fs": "0.0.2",
+	"twitter": "^1.2.5",
+	"lodash": "^4.11.0",
+	"mongodb": "^2.0.0"
+  },
+  "repository" :{
+	  "type": "git",
+	  "url" : "https://github/com/nates321/itws4500/labs/lab9"
+	  
+  }
+}

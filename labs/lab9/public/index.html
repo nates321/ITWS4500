@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>lab7</title>
+
+	    <link rel="stylesheet" type="text/css" href="lab5.css">
+	</head>
+
+	<body>
+		<header text-align = "center"><h3>Lab  9: putting it all together</h3></header>
+		
+    	<form method = "post">
+    		<div id = "theform" class = "row">
+    		<!-- simple form to choose what to search for-->
+    			<div id = "inputs1" class = "col-md-4">
+    				<h4>For Querying, Building Database, or exporting to file</h4>
+    				<label for="subjct">Subject</label>
+    				<input type="text" name = "subject" id = "subject" placeholder="defaults to RPI area">
+    				<br />
+    				<label for="num">Number of Tweets</label>
+    				<input type="text" name = "num" id = "num" placeholder="default is 25" >
+    				<br />
+                </div>
+                <div id = "inputs2" class = "col-md-4">
+    				<h4>For Exporting to File</h4>
+    				<label for="fileName">File Name</label>
+    				<input type="text" name = "fileName" id = "fileName" placeholder="dont include extension">
+    				<br />
+    				<select name = "etype" >
+	    				<option value = "json">Json</option>
+	    				<option value = "csv">csv</option>
+	    				<option value = "xml">xml</option>
+    				</select>
+
+    			</div>
+    			<div id = "submits" class = "col-md-4">
+                <h4>Submit!</h4>
+                    <div class ="row">
+                         <div class = "col-md-6">
+	    		         <button type= "submit" formaction="/tweetsAPI">Query Twitter</button>
+	    		         
+	    		         <button type="submit" formaction="/tweetsDB">Query Database</button>
+	    		         </div>
+                         <div class= "col-md-6">
+	    		         <button type ="submit" formaction = "/buildDB">Build DB </button>
+	    		     
+    			         <button type = "submit" formaction="/export">export from database</button>
+                         </div>
+                    </div>
+    			</div>
+    		</div>
+    	</form>
+    	
+    	
+	</body>
+</html>
