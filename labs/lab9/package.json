@@ -4,9 +4,9 @@
   "license": "UNLICENSED",
   "main": "app.js",
    "scripts": {
-	"start": "npm run installDB && npm run startServer",
-	"installDB": "node install/install.js",
-    "startServer": "node app.js"
+	
+	"install": "node install/install.js",
+    "start": "node app.js"
   },
   "dependencies": {
 	"body-parser": "^1.15.0",

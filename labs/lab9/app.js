@@ -252,7 +252,7 @@ app.post('/export', function(req, res) {
 
   MongoClient.connect(URL, function (err, db) { //connect to the DB
                 if (err) {
-                  res.send("<script>alert('could not connect to DB');window.location.href = 'index.html';</scipt>");
+                  res.send('<script>alert("could not connect to DB");window.location.href = "index.html";</scipt>');
                 }
 
                 db.collections(function (err, collections) {
@@ -311,7 +311,7 @@ app.post('/export', function(req, res) {
                     });
                     if (!found) {
                         console.log("collection not found");
-                        res.send("<script>alert('No Collections Match Your Search');window.location.href = 'index.html';</scipt>");
+                        res.send('<script>alert("No Collections Match Your Search");window.location.href = "index.html";</scipt>');
                     }
                 });
             });
@@ -475,7 +475,7 @@ app.post('/buildDB', function(req, res) {//build the database
           tweets = tweets.statuses;
           MongoClient.connect(URL, function (err, db) {
                     if (err !== null) {
-                        res.send("<script>alert('Connection to DB could not be established'); <script>window.location.href = 'index.html';</script>");
+                        res.send('<script>alert("Connection to DB could not be established"); <script>window.location.href = "index.html";</script>');
                         return;
                     }
                     console.log("connected to DB");
@@ -510,7 +510,8 @@ app.post('/buildDB', function(req, res) {//build the database
                                 db.createCollection(req.body.subject, function (err, collection) {
                                     collection.insertMany(tweets, function (err) {
                                         db.close();
-                                        res.send("<script>alert('created collection'); <script>window.location.href = 'index.html';</script>");
+                                        console.log("going back");
+                                        res.send('<script>alert("created collection"); window.location.href = "index.html";</script>');
                                     });
                                 });
                             });
@@ -537,7 +538,7 @@ app.post('/buildDB', function(req, res) {//build the database
               tweets = tweets.statuses;
               MongoClient.connect(URL, function (err, db) {
                     if (err !== null) {
-                        res.send("<script>alert('Connection to DB could not be established'); <script>window.location.href = 'index.html';</script>");
+                        res.send('<script>alert("Connection to DB could not be established"); <script>window.location.href = "index.html";</script>');
                         return;
                     }
                     console.log("connected to DB");
@@ -554,7 +555,7 @@ app.post('/buildDB', function(req, res) {//build the database
                             db.createCollection(req.body.geo, function (err, collection) {
                                 collection.insertMany(tweets, function (err) {
                                     db.close();
-                                    res.send("<script>alert('created collection'); <script>window.location.href = 'index.html';</script>");
+                                    res.send('<script>alert("created collection"); <script>window.location.href = "index.html";</script>');
                                 });
                             });
                         }
@@ -565,7 +566,7 @@ app.post('/buildDB', function(req, res) {//build the database
                                 db.createCollection(req.body.geo, function (err, collection) {
                                     collection.insertMany(tweets, function (err) {
                                         db.close();
-                                        res.send("<script>alert('created collection'); <script>window.location.href = 'index.html';</script>");
+                                        res.send('<script>alert("created collection"); <script>window.location.href = "index.html";</script>');
                                     });
                                 });
                             });
@@ -679,7 +680,7 @@ app.post('/tweetsDB', function(req, res) { //read from database
 
     MongoClient.connect(URL, function (err, db) {
                 if (err) {
-                  res.send("<script>alert('could not connect to DB');window.location.href = 'index.html';</scipt>");
+                  res.send('<script>alert("could not connect to DB");window.location.href = "index.html";</scipt>');
                 }
 
                 db.collections(function (err, collections) {
