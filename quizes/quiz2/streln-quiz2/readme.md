@@ -1,0 +1,1 @@
+I kept the list of temperatures and locations because i didnt know if you wanted just the graph or not.

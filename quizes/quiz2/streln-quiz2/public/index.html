@@ -1,0 +1,34 @@
+<!DOCTYPE html >
+<html ng-app="quizApp">
+<head>
+    <title>Quiz 2</title>
+</head>
+
+<body ng-controller="quizCtrl" ng-init="view=0; displayed=0">
+	<p>Welcome to the weather app. enter a zip code then hit add. once you add your zip code, it will display your weather and all other zip codes weather!
+    
+
+    <input type="text" ng-model="zip" name = "zip" id = "zip" maxlength="5">
+    <button ng-click="add()">Add</button>
+    <button ng-click="show()" ng-show="view==1">Display</button>
+    <button ng-click="output()" ng-show="view==1">Output</button>
+   
+
+    <div ng-show="displayed == 1">
+
+    	<canvas id="bar" class="chart chart-bar" chart-series="series" chart-data="barValues" chart-labels="barLabels" chart-options="options">
+        </canvas>  
+
+    	<div ng-repeat="temp1 in temps">
+	    	Zip Code: {{temp1.zip}} &emsp; Location: {{temp1.location}}  &emsp;Temperature: {{temp1.temp}}&#8451; 
+	    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular.min.js"></script>
+    <script type="text/javascript" src="Chart.min.js"></script>
+    <script type="text/javascript" src="angular-chart.min.js"></script>
+
+    <!--contains all the scripts for the lab-->
+    <script src="quiz.js"></script>
+</body>
+</html>

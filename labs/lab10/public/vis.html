@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>lab10</title>
+
+	    <link rel="stylesheet" type="text/css" href="lab10.css">
+        <link rel="stylesheet" type="text/css" href="tether.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <script type="text/javascript" src="Chart.min.js"></script>
+        <script type="text/javascript" src="angular-chart.min.js"></script>
+        <script type="text/javascript" src="tether.min.js"></script>
+        <script type ="text/javascript" src="lab10.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	</head>
+
+	<body data-ng-app = "visApp" data-ng-controller = "visCtrl">
+		<header text-align = "center" class = "row"> 
+            <div class= "row">
+            <h3 class = "col-md-12">Lab  10: visualization</h3>
+            
+            <center class ="col-md-12"><a href= "index.html"><button style="border: none">Go Back</button></a></center>
+
+            </div>
+        </header>
+		
+    	<form ng-submit="submit()">
+    		<div id = "theform" class = "row">
+    		<!-- simple form to choose what to search for-->
+    			<div id = "inputs1" class = "col-md-4">
+    				<h4>what to analyze</h4>
+    				<label for="subjct">Subject</label>
+    				<input type="text" ng-model="subject" name = "subject" id = "subject" placeholder="defaults to RPI area">
+    				<br />
+    				<label for="num">Number of Tweets</label>
+    				<input type="text" ng-model = "num" name = "num" id = "num" placeholder="default is 25" >
+    				<br />
+                </div>
+               
+    			<div id = "submits" class = "col-md-4">
+                    <h4>Submit!</h4>
+                    <div class ="row">                
+                         <button type = "submit" formaction="/visualize" ng-click="view = 1">data visualization</button>
+
+                    </div>
+                </div>
+    		</div>
+    		
+    	</form>
+    	<!-- Shows 4 charts when analytics have run -->
+        <div class = "col-md-12" ng-show="view==1">
+            <br />
+            <!-- language of tweets pie chart -->
+            <h3 class = "row">Language of tweets</h3>
+            <div class = "row">
+                <canvas id="pie" class="chart chart-pie" chart-data="pieValues"    chart-labels="pieLabels" chart-options="options" >
+                </canvas>
+            </div>
+            
+
+            <!-- device tweeted from polar area chart -->
+            <h3 class = "row">device tweeted from</h3>
+
+            <div class = "row">
+                <canvas id="pie3" class="chart chart-polar-area" chart-data="pieValues3" chart-labels="pieLabels3" chart-options="options">
+                </canvas>  
+            </div>
+
+
+            <!-- timezones of users pie chart -->
+            <h3 class = "row">Time Zones</h3>
+
+            <div class = "row">
+                <canvas id="pie3" class="chart chart-pie" chart-data="pieValues4" chart-labels="pieLabels4" chart-options="options">
+                </canvas>  
+            </div>
+
+
+            <!-- favorites doughnut chart -->
+            <h3 class = "row"> number of favorites</h3>
+            
+            <div class = "row">
+                <canvas id="pie2" class="chart chart-doughnut" chart-data="pieValues2" chart-labels="pieLabels2" chart-options="options">
+                </canvas>
+            </div>
+
+
+    	</div>
+	</body>
+</html>

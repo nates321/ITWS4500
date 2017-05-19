@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="utf-8">
+   
+		<title>Nathn Strelser Lab 7</title>
+
+   		<!-- link everything thats required -->
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="lab5.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<script src="lab7db.js"></script>
+	
+	</head>
+	<!--create the app and controller -->
+	<body ng-app= "myApp" ng-controller="myController">  
+		<div id = "theform">
+			<h4> Search Again!</h4>
+    		<a href="index.html"><button>RESET</button></a>
+    	</div>
+    	<br />
+		
+
+
+		<div class= "container-fluid">
+			<div class="row">
+			<br />
+				<div class ="col-md-2">
+					<div class="row">
+						<h3 class = "list-group-item-heading col-md-12"> Hashtags </h3>
+					</div>
+					<div class="row">
+						<ul class="list-group col-md-12 hashtag" float = "right">	
+						</ul>
+					</div>
+				</div>
+				<div class = "col-md-10">
+					<h3 class = "list-group-item-heading col-md-11">Tweets <img src="bird.png" height="50" width="50"/> </h3>				
+				
+					<ul class="list-group col-md-12 tweet">			
+					</ul>
+				</div>		
+			</div>
+		</div>	
+	</body>
+</html>

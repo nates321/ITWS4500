@@ -1,0 +1,93 @@
+[
+	{
+		"_id": "5907a08c4be0fa3f3ca4cb40",
+		"temp": 21,
+		"location": "Troy",
+		"zip": 12180,
+		"__v": 0
+	},
+	{
+		"_id": "5907a1059d003d65c08db51b",
+		"temp": 21,
+		"location": "Hoboken",
+		"zip": 10001,
+		"__v": 0
+	},
+	{
+		"_id": "5907a1219d003d65c08db51c",
+		"temp": 29,
+		"location": "Lakeside",
+		"zip": 32003,
+		"__v": 0
+	},
+	{
+		"_id": "5907a12e9d003d65c08db51d",
+		"temp": 27,
+		"location": "Montgomery Village",
+		"zip": 20879,
+		"__v": 0
+	},
+	{
+		"_id": "5907a3214832c85f74461eba",
+		"temp": 27,
+		"location": "North Potomac",
+		"zip": 20878,
+		"__v": 0
+	},
+	{
+		"_id": "5907a37012fc42519cb09979",
+		"temp": 27,
+		"location": "Gaithersburg",
+		"zip": 20877,
+		"__v": 0
+	},
+	{
+		"_id": "5907a52878826e66b819dfee",
+		"temp": 27,
+		"location": "Montgomery Village",
+		"zip": 20879,
+		"__v": 0
+	},
+	{
+		"_id": "5907a6595377f9168c229416",
+		"temp": 27,
+		"location": "Montgomery Village",
+		"zip": 20879,
+		"__v": 0
+	},
+	{
+		"_id": "5907a6bd5ac17042dc482647",
+		"temp": 27,
+		"location": "Montgomery Village",
+		"zip": 20879,
+		"__v": 0
+	},
+	{
+		"_id": "5907a7374ad4a7584c7c9da8",
+		"temp": 20,
+		"location": "Troy",
+		"zip": 12180,
+		"__v": 0
+	},
+	{
+		"_id": "5907a9341511eb46dc4a9ffb",
+		"temp": 26,
+		"location": "Florence-Graham",
+		"zip": 90001,
+		"__v": 0
+	},
+	{
+		"_id": "5907ab1e346e1463040c7245",
+		"temp": 20,
+		"location": "Troy",
+		"zip": 12180,
+		"__v": 0
+	},
+	{
+		"_id": "59117cedfa599a77e48c5a1b",
+		"temp": 3,
+		"location": "Montgomery Village",
+		"zip": 20879,
+		"__v": 0
+	}
+]

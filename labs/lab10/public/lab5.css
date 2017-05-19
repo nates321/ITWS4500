@@ -1,0 +1,103 @@
+#theform{
+	width: 50%;
+	text-align: center;
+	background-color: white;
+	margin-left: 25%;
+	border: 1px black solid;
+	height: 50%;
+	float: left;
+}
+div#theform{
+	width: 100%;
+	text-align: center;
+	background-color: white;
+	margin-left: 0%;
+	border: 1px black solid;
+	height: 20%;
+	float: left;
+
+}
+a button {
+	background-color: #f5f8fa;
+	border: 1px black solid;
+	text-decoration: none;
+	color: black;
+}
+
+#inputs1{
+
+	width: 33%;
+	float: left;
+	
+}
+#inputs2{
+
+	width: 33%;
+	float: left;
+	
+}
+#submits{
+	width: 30%;
+	float: right;
+	vertical-align: center;
+	padding-top: auto;
+	margin-top: auto;
+}
+
+#submits button{
+
+	background-color: #f5f8fa;
+	border: 1px black solid;
+	text-decoration: none;
+
+}
+
+body {
+	background-color: #f5f8fa;
+	
+}
+
+.tweets:hover {
+	
+	background-color: #f5f8fa;
+	
+}
+.row h3 {
+	height: 50px;
+}
+
+.screen {
+	color: #8899a6;
+}
+
+.row
+
+.list-group {
+	
+	border-radius: 25px;
+	
+	
+}
+
+h3 {
+	text-align: center;
+	
+}
+
+a {
+	color: #DD0000;
+	text-decoration: none;
+}
+
+a:hover{
+	
+	color: #DD0000;
+	text-decoration: underline;
+	
+	
+}
+
+a:active {
+	color:#DD0000;
+	
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Quiz2Server",
+  "version": "1.0.0",
+  "main": "server.js",
+   "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+	"body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "request": "^2.69.0",
+	"openweather-node":  "0.0.4",
+	"fs": "0.0.2",
+	"mongoose": "^4.9.3"
+	
+  }
+}
